@@ -1,0 +1,28 @@
+---
+const TODAY = new Date(Date.now());
+const CURRENT_YEAR = TODAY.getFullYear();
+const USER_NAME = '';
+---
+
+<footer>
+	<section>
+		<small>&copy; {CURRENT_YEAR} {USER_NAME}</small> | <small>Last updated <time datetime={`${TODAY.getUTCFullYear()}-${TODAY.getUTCMonth()+1}-${TODAY.getUTCDay()+1}`}>{TODAY.toLocaleDateString('en',{year:'numeric',month:'short',day:'numeric'})}</time></small>
+	</section>
+</footer>
+
+<style lang="scss">
+footer {
+	padding: 0 64px;
+	section {
+		padding: 8px;
+	}
+}
+@media only screen and (min-width: 50em) {
+	footer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+</style>
