@@ -1,0 +1,26 @@
+---
+import Link from '@components/HeaderLink.astro';
+
+const navLinks = [
+	{name: 'Home', url: '/'},
+];
+---
+
+<header>
+	<nav>
+		{navLinks.map(link => <Link url={link.url} name={link.name} />)}
+	</nav>
+</header>
+
+<style lang="scss">
+header {
+	padding: 0 12px;
+	nav {
+		display: flex;
+		font: 1em sans-serif;
+		padding: 0 8px;
+		justify-content: center;
+		align-items: stretch;
+	}
+}
+</style>
