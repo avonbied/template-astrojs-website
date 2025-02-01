@@ -1,0 +1,28 @@
+{
+	"name": "<repo_name>",
+	"version": "1.0.0",
+	"author": "<author>",
+	"repository": "<repository_url>",
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"prestart": "astro build",
+		"start": "astro check && tsc --noEmit && astro preview",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@astrojs/sitemap": "^3.1.2",
+		"astro": "^4.5.16"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.3.4",
+		"@types/node": "^20.8.10",
+		"sass": "^1.74.1",
+		"typescript": "^5.4.4"
+	}
+}
