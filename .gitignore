@@ -128,3 +128,19 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.pnp/
+
+# Pipeline/build configs
+!.github/
+!.devcontainer/
+
+# production
+.astro/
+
+# misc
+.DS_Store
+*.pem
+
+# StackBlitz
+# .stackblitzrc
+# sandbox.config.json
