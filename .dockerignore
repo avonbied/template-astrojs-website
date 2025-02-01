@@ -1,0 +1,25 @@
+# Editor Files
+.vscode/
+.stackblitzrc
+sandbox.config.json
+
+# Supporting Files
+.github/
+.devcontainer/
+
+.dockerignore
+Dockerfile*
+docker-compose*
+compose.yaml
+
+dist/
+node_modules
+npm-debug.log
+README.md
+LICENSE
+
+# Working Files
+docs/
+test/
+docs/
+temp/
