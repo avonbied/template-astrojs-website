@@ -14,7 +14,8 @@
 		"source=${localWorkspaceFolderBasename}-astro,target=${containerWorkspaceFolder}/.astro,type=volume"
 	],
 	"containerEnv": {
-		"PORT": "3000"
+		"PORT": "3000",
+		"ASTRO_TELEMETRY_DISABLED": 1
 	},
 	"forwardPorts": [3000],
 	"postStartCommand": "yarn dev",
