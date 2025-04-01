@@ -22,6 +22,7 @@
 	"devDependencies": {
 		"@astrojs/check": "latest",
 		"@types/node": "latest",
+		"@vite-pwa/astro": "latest",
 		"sass": "latest",
 		"typescript": "latest"
 	}
