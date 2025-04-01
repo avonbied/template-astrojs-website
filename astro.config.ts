@@ -4,7 +4,7 @@ import pwa from '@vite-pwa/astro';
 
 // https://astro.build/config
 export default defineConfig({
-	site: process.env.SITE_URL ?? 'localhost',
+	site: process.env.SITE_URL ?? `http://localhost:${process.env.PORT}`,
 	base: process.env.SITE_BASE,
 	integrations: [sitemap(), pwa()],
 	server: {
