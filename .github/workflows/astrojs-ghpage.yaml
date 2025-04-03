@@ -26,23 +26,21 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-deno@v2
         with:
-          node-version: lts/iron
-          cache: 'yarn'
-          cache-dependency-path: ${{ env.BUILD_PATH }}/*.lock
+          deno-version: stable
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
-        run: yarn install
+        run: deno install --allow-scripts
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         env:
           SITE_URL: "${{ steps.pages.outputs.origin }}"
           SITE_BASE: "${{ steps.pages.outputs.base_path }}"
         run: |
-          yarn astro build
+          deno run build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
