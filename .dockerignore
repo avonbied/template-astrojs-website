@@ -13,7 +13,8 @@ docker-compose*
 compose.yaml
 
 dist/
-node_modules
+node_modules/
+vendor/
 npm-debug.log
 README.md
 LICENSE

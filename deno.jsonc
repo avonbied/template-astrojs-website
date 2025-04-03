@@ -1,29 +1,25 @@
 {
-	"name": "<repo_name>",
+	"name": "@<user_or_org>/<repo_name>",
 	"version": "1.0.0",
-	"author": "<author>",
-	"repository": "<repository_url>",
 	"license": "MIT",
-	"type": "module",
-	"private": true,
-	"scripts": {
+	"vendor": true,
+	"tasks": {
 		"dev": "astro dev",
-		"prestart": "astro build",
-		"start": "astro check && tsc --noEmit && astro preview",
 		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"check": {
+			"command": "astro check && tsc --noEmit",
+			"dependencies": ["build"]
+		},
+		"preview": {
+			"command": "astro preview",
+			"dependencies": ["check"]
+		}
 	},
-	"dependencies": {
-		"@astrojs/sitemap": "latest",
-		"astro": "latest"
-	},
-	"devDependencies": {
-		"@astrojs/check": "latest",
-		"@types/node": "latest",
-		"@vite-pwa/astro": "latest",
-		"sass": "latest",
-		"typescript": "latest"
+	"imports": {
+		"@astrojs/check": "npm:@astrojs/check@latest",
+		"@astrojs/sitemap": "npm:@astrojs/sitemap@latest",
+		"@vite-pwa/astro": "npm:@vite-pwa/astro@latest",
+		"astro": "npm:astro@latest",
+		"sass": "npm:sass@latest"
 	}
 }
