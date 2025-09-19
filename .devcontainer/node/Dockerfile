@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM node:lts-alpine
 
-ARG WORK_DIR=/home/node/app
+ARG WORK_DIR=/home/app
 
 RUN apk add --no-cache git
 ENV YARN_CACHE_FOLDER=/cache/yarn
