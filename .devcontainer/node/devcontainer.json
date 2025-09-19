@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/docker-existing-dockerfile
+{
+	"name": "AstroJS Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile",
+		"args": {
+			"WORK_DIR": "${containerWorkspaceFolder}"
+		}
+	},
+	"mounts": [
+		"source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+		"source=${localWorkspaceFolderBasename}-astro,target=${containerWorkspaceFolder}/.astro,type=volume"
+	],
+	"containerEnv": {
+		"PORT": "3000",
+		"ASTRO_TELEMETRY_DISABLED": "1"
+	},
+	"forwardPorts": [3000],
+	"postStartCommand": "yarn dev",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"astro-build.astro-vscode",
+				"VisualStudioExptTeam.vscodeintellicode"
+			]
+		}
+	}
+}
