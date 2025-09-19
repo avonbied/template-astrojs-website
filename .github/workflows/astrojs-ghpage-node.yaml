@@ -25,22 +25,24 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          deno-version: latest
+          node-version: lts/iron
+          cache: 'yarn'
+          cache-dependency-path: ${{ env.BUILD_PATH }}/*.lock
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
-        run: deno install --allow-scripts
+        run: yarn install
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         env:
           SITE_URL: "${{ steps.pages.outputs.origin }}"
           SITE_BASE: "${{ steps.pages.outputs.base_path }}"
         run: |
-          deno run build
+          yarn astro build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

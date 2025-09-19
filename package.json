@@ -1,0 +1,28 @@
+{
+	"name": "@<user_or_org>/<repo_name>",
+	"version": "1.0.0",
+	"author": "<user_or_org>",
+	"repository": "https://github.com/<user_or_org>/<repo_name>",
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"precheck": "yarn build",
+		"check": "astro check && tsc --noEmit",
+		"prepreview": "yarn check",
+        "preview": "astro preview"
+	},
+	"dependencies": {
+		"@astrojs/sitemap": "latest",
+		"@vite-pwa/astro": "latest",
+		"astro": "latest"
+	},
+	"devDependencies": {
+		"@astrojs/check": "latest",
+		"@types/node": "latest",
+		"sass": "latest",
+		"typescript": "latest"
+	}
+}
