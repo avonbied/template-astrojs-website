@@ -16,7 +16,7 @@ ENV DENO_NO_PROMPT=1
 ENV DENO_NO_UPDATE_CHECK=1
 
 RUN apk update && \
-	apk add --no-cache git libstdc++
+	apk add --no-cache git gpg libstdc++
 
 WORKDIR ${WORK_DIR}
 

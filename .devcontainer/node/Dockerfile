@@ -3,7 +3,7 @@ FROM node:lts-alpine
 
 ARG WORK_DIR=/home/app
 
-RUN apk add --no-cache git
+RUN apk add --no-cache git gpg
 ENV YARN_CACHE_FOLDER=/cache/yarn
 WORKDIR ${WORK_DIR}
 
