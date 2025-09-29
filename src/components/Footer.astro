@@ -11,14 +11,15 @@ const USER_NAME = '';
 </footer>
 
 <style lang="scss">
+@use '@assets/styles' as theme;
 footer {
+	color: theme.get-color('default');
+	background-color: theme.get-color('background');
 	padding: 0 64px;
 	section {
 		padding: 8px;
 	}
-}
-@media only screen and (min-width: 50em) {
-	footer {
+	@media only screen and (min-width: theme.$breakpoint-desktop) {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;

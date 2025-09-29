@@ -13,7 +13,10 @@ const navLinks = [
 </header>
 
 <style lang="scss">
+@use '@assets/styles' as theme;
 header {
+	color: theme.get-color('default');
+	background-color: theme.get-color('background');
 	padding: 0 12px;
 	nav {
 		display: flex;

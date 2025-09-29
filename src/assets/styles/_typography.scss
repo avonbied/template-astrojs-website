@@ -1,0 +1,69 @@
+$mono-font: 'Courier New', Courier, monospace !default;
+$sans-font: Arial, Helvetica, sans-serif !default;
+$serif-font: Georgia, 'Times New Roman', Times, serif !default;
+
+$base-font-size: 1rem !default;
+$base-line-height: 1.6 !default;
+
+body, body * {
+	font-family: $serif-font;
+	overflow-wrap: break-word;
+}
+
+// Header content
+h1, h2, h3, h4, h5, h6 {
+	font-family: $sans-font !important;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+h4, h6 {
+	font-style: italic;
+}
+
+// Body content
+body, p {
+	font-size: $base-font-size;
+}
+small {
+	font-size: $base-font-size * 0.75;
+}
+body, p, small {
+	font-family: $serif-font !important;
+	line-height: $base-line-height;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+a {
+	text-decoration: none;
+	transition: color 200ms;
+	cursor: pointer;
+}
+
+// Lists
+li ul, li ol { margin: 0 1rem; }
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
+ol ol { list-style: lower-alpha; }
+ol ol ol { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+
+// Monospaced content
+pre, code, samp { font-family: $mono-font !important; }
+pre {
+	font-size: 0.875rem;
+	overflow: auto;
+}
+pre code {
+	background-color: inherit;
+	border-radius: 0;
+	color: inherit;
+	padding: 0;
+}
+code {
+	border-radius: 3px;
+	font-size: 0.875rem;
+	padding: 0.15em 0.4em;
+}
+hr { border: 0; }

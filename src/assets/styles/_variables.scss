@@ -1,0 +1,15 @@
+@use 'sass:list';
+@use 'sass:map';
+
+$light-theme: false;
+$colors: (
+	default: (#000, #fff),
+	foreground: (#000, #0000ff, #fff),
+	background: (#fff, #808080, #000),
+);
+
+@function get-color($domain, $n: 1) {
+	@return list.nth(map.get($colors, $domain), $n *(if($light-theme, 1, -1)));
+}
+
+$breakpoint-desktop: 50em;
