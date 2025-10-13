@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:lts-alpine
+FROM docker.io/node:lts-alpine
 
 ARG WORK_DIR=/home/app
 
