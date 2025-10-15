@@ -12,7 +12,7 @@
 		"precheck": "yarn build",
 		"check": "astro check && tsc --noEmit",
 		"prepreview": "yarn check",
-        "preview": "astro preview"
+		"preview": "astro preview"
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "latest",
