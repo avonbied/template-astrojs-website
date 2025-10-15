@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"license": "MIT",
 	"vendor": true,
+	"nodeModulesDir": "auto",
 	"tasks": {
 		"dev": "astro dev",
 		"build": "astro build",
@@ -21,5 +22,10 @@
 		"@vite-pwa/astro": "npm:@vite-pwa/astro@latest",
 		"astro": "npm:astro@latest",
 		"sass": "npm:sass@latest"
+	},
+	"permissions": {
+		"default": {
+			"all": true
+		}
 	}
 }

@@ -18,7 +18,7 @@
 		"ASTRO_TELEMETRY_DISABLED": "1"
 	},
 	"forwardPorts": [3000],
-	"postStartCommand": "deno run --allow-net dev",
+	"postStartCommand": "deno task -P dev",
 	"customizations": {
 		"vscode": {
 			"extensions": [
