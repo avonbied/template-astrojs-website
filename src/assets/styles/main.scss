@@ -8,9 +8,3 @@ body {
 	min-height: 100vh;
 	background-color: get-color('background');
 }
-
-#page-content {
-	display: flex;
-	flex-flow: column;
-	flex: 1 0 100%;
-}
